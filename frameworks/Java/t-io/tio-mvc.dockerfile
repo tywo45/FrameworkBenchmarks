@@ -3,7 +3,7 @@ WORKDIR /t-io
 COPY pom.xml pom.xml
 COPY src src
 COPY script script
-RUN mvn package -q
+RUN mvn install -q
 
 #TODO use separate JDK/JRE for the RUN (as the other builds)
 WORKDIR /t-io/target/tio-http-server-benchmark
